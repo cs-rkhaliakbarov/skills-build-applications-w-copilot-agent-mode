@@ -14,7 +14,7 @@ describe('OctoFit data contract', () => {
   });
   it('requires teams to have a name, mascot, and members array', () => {
     const team = new Team({ name: 'Octocats', mascot: 'Mona', members: [] });
-    expect(team.validateSync()).toBeUndefined();
+    expect(team.validateSync()).toBeUndefined()
     const defaulted = new Team({ name: 'Robocats', mascot: 'Hubot' });
     expect(Array.isArray(defaulted.members)).toBe(true);
     expect(defaulted.members).toHaveLength(0);
